@@ -2,7 +2,7 @@ import { ArmorDecorator } from './decorators/ArmorDecorator';
 import { HelmetDecorator } from './decorators/HelmetDecorator';
 import { Koopa } from './enemies/Koopa';
 
-export default function decorator() {
+export default function main() {
   const koopa = new Koopa();
   const koopaWithArmor = new ArmorDecorator(koopa);
   const koopaWithHelmet = new HelmetDecorator(koopa);
