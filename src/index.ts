@@ -1,1 +1,3 @@
-console.log('hello world');
+import decorator from './decorator/main';
+
+decorator();
