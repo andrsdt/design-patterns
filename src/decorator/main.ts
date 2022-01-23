@@ -1,13 +1,13 @@
-import { Armor } from './decorators/Armor';
-import { Helmet } from './decorators/Helmet';
+import { ArmorDecorator } from './decorators/ArmorDecorator';
+import { HelmetDecorator } from './decorators/HelmetDecorator';
 import { Koopa } from './enemies/Koopa';
 
 export default function decorator() {
   const koopa = new Koopa();
-  const koopaWithArmor = new Armor(koopa);
-  const koopaWithHelmet = new Helmet(koopa);
-  const koopaWithArmorAndHelmet = new Helmet(koopaWithArmor);
-  const koopaWithHelmetAndArmor = new Armor(koopaWithHelmet);
+  const koopaWithArmor = new ArmorDecorator(koopa);
+  const koopaWithHelmet = new HelmetDecorator(koopa);
+  const koopaWithArmorAndHelmet = new HelmetDecorator(koopaWithArmor);
+  const koopaWithHelmetAndArmor = new ArmorDecorator(koopaWithHelmet);
 
   console.log('\n=============== START Decorator pattern ===============\n');
 
